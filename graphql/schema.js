@@ -16,13 +16,13 @@ const typeDefs = gql`
     rating: Float!
     runtime: Int!
     genres: [String]
-    description_full: String!
-    large_cover_image: String!
+    description_intro: String!
+    medium_cover_image: String!
   }
 
   type Query {
     movies(limit: Int, minimum_rating: Float): [Movie]!
-    movie(id: Int): MovieDetail!
+    movie(id: Int!): MovieDetail!
   }
 `;
 
